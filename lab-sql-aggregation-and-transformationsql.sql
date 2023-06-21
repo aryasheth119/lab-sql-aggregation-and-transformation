@@ -8,7 +8,7 @@ FROM sakila.film;
 
 SELECT * FROM sakila.rental;
 SELECT DATEDIFF(MAX(last_update), MIN(rental_date)) AS operating_days
-FROM rental;
+FROM sakila.rental;
 
 SELECT rental_id, rental_date, MONTH(rental_date) AS rental_month, DAYNAME(rental_date) AS rental_weekday
 FROM sakila.rental
